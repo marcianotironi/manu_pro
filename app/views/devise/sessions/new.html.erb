@@ -1,0 +1,29 @@
+<div class="container py-5">
+  <div class="row d-flex justify-content-center align-items-center h-100">
+    <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+      <div class="card shadow-2-strong" style="border-radius: 1rem;">
+        <div class="card-body p-5 text-center">
+
+          <%= render "devise/shared/error_messages", resource: resource %>
+
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <div class="mb-1">
+              <label for="exampleInputEmail1" class="form-label">  <%= f.label :email %><br /> </label>
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control"%>
+            </div>
+
+            <div class="mb-1">
+              <%= f.label :password %><br />
+              <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>
+            </div>
+
+            <div class="actions">
+              <%= f.submit "Sign up", class: "btn btn-primary btn-lg btn-block" %>
+            </div>
+
+          <% end %>
+          <hr class="my-4">
+      </div>
+    </div>
+  </div>
+</div>

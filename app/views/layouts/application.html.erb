@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bootstrapper</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    
+    <nav class="nav" style='background-color: #BAD0E6;'>
+      <a class="nav-link active" aria-current="page" href="#">
+        <div style='margin-left: 20px;'>
+          Manutenção de equipamentos
+        </div>
+      </a>
+      <% if current_user %>
+          <div class="position-absolute end-0" >
+            <%= link_to "Log out", destroy_user_session_path, method: :delete,  style:'margin-right: 20px;' %>
+          </div> 
+      <% else %>
+          <div class="position-absolute end-0" >
+              <%= link_to "Register", new_user_registration_path,  style:'margin-right: 20px;'  %>
+              <%= link_to "Log in", user_session_path,  style:'margin-right: 20px;'  %>
+          </div>
+      <% end %>
+    </nav>
+
+    <%= yield %>
+    
+  </body>
+</html>

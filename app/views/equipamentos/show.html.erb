@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <h4 class="mt-4 mb-4 display-4">Detalhes do Equipamento</h4>
+  </div>
+  <div class="row justify-content-center">
+    <table class="table">
+      <thead>
+          <tr>
+            <th>ID:</th>
+            <th>Descrição:</th>
+            <th> <%= link_to 'Voltar', root_path %> </th>
+          </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><%= @equipamento.id %></td>
+          <td><%= @equipamento.descricao%></td>
+        </tr>       
+      </tbody>
+    </table>
+    <div class="row justify-content-center">
+    <table class="table">
+      <tbody>
+        <tr>
+          <th>Componentes:</th>
+          <th> <%= link_to 'Cadastrar componente', new_componente_path %> </th>
+        </tr>
+        <tr>
+          <% if @componentes.any? %>
+              <% @componentes.each do |componente| %>
+              <tr>
+                <td>
+                  <%= componente.descricao %>
+                </td>
+              </tr>
+              <% end %>
+          <% else %>
+            <td>
+              "Sem componentes cadastrados"
+            </td>
+          <% end %>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+ 
+</div>
