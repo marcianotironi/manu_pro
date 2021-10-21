@@ -28,11 +28,17 @@
         <tr>
           <% if @componentes.any? %>
               <% @componentes.each do |componente| %>
-              <tr>
-                <td>
-                  <%= componente.descricao %>
-                </td>
-              </tr>
+                <tr>
+                  <td>
+                    <%= componente.descricao %>
+                  </td>
+                  <td>
+                    <%= link_to 'Editar', edit_componente_path(componente.id) %>
+                  </td>
+                  <td>
+                    <%= link_to 'Apagar', componente_path(componente.id), method: :delete, data: { confirm: 'Realmente deseja excluir' } %>
+                  </td>
+                </tr>
               <% end %>
           <% else %>
             <td>

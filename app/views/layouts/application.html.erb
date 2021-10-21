@@ -11,11 +11,11 @@
 
   <body>
     
-    <nav class="nav" style='background-color: #BAD0E6;'>
+    <nav class="nav" style='background-color: #BAD0E6; height: 40px; padding-top: 5px;'>
       <a class="nav-link active" aria-current="page" href="#">
-        <div style='margin-left: 20px;'>
-          Manutenção de equipamentos
-        </div>
+        
+          <%= link_to 'Manutenção de equipamentos', equipamentos_path %>
+    
       </a>
       <% if current_user %>
           <div class="position-absolute end-0" >

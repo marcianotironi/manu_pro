@@ -1,11 +1,11 @@
 <div class="container">
   <div class="row justify-content-center">
-    <h4 class="mt-4 mb-4 display-4">Editando Equipamento</h4>
+    <h4 class="mt-4 mb-4 display-4">Editando Componente</h4>
   </div>
   <div class="row justify-content-center">
-    <%= form_with(model: @equipamento, local: true) do |form| %>
+    <%= form_with(model: @componente, local: true) do |form| %>
       <div class="form-group">
-        <%= form.label "Descrição" %>
+        <%= form.label "Descrição:" %>
         <%= form.text_field :descricao, class: 'form-control' %>
       </div>
       <br>

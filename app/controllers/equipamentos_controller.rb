@@ -1,5 +1,5 @@
 class EquipamentosController < ApplicationController
-    before_action :current_equipamento, only: [:show, :destroy]
+    before_action :current_equipamento, only: [:show, :destroy, :edit]
 
     def index
         @equipamentos = Equipamento.all
@@ -22,10 +22,9 @@ class EquipamentosController < ApplicationController
     end
 
     def update
-        @equipamento.update_attibutes(:descricao, equipamento_params)
-        binding.pry
-        redirect_to equipamento_path(@equipamento)
-
+        current_equipamento
+        @equipamento.update(equipamento_params)
+        redirect_to root_path
     end
 
     def destroy 
