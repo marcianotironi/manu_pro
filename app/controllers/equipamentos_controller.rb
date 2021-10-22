@@ -39,6 +39,7 @@ class EquipamentosController < ApplicationController
     end
 
     def current_equipamento
+      
         @equipamento = Equipamento.find(params[:id])    
     end
   

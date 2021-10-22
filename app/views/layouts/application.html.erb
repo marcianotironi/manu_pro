@@ -9,7 +9,7 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="bg-img" style="background-image: src('/images/image.png'); height: 100vh;" >
     
     <nav class="nav" style='background-color: #BAD0E6; height: 40px; padding-top: 5px;'>
       <a class="nav-link active" aria-current="page" href="#">
@@ -28,8 +28,6 @@
           </div>
       <% end %>
     </nav>
-
-    <%= yield %>
-    
+        <%= yield %>
   </body>
 </html>

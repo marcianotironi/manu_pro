@@ -1,5 +1,5 @@
 class ComponentesController < ApplicationController
-    before_action :current_componente, only: [:show, :destroy, :edit]
+    before_action :current_componente, only: [:show, :destroy, :edit, :update]
     
     def index
         @componente = Componente.all
@@ -13,16 +13,13 @@ class ComponentesController < ApplicationController
     end
 
     def update
-        current_componente
         @componente.update(componente_params)
         redirect_to equipamento_path(current_equipamento)
     end
 
     def create
-        componente = current_componente
-        equipamento = Equipamento.find_by_id(componente.equipamento_id)
-        if componente.descricao? && equipamento != nil
-            componente.save
+        componente = Componente.new(componente_params)
+        if componente.save
             redirect_to equipamento_path(componente_params[:equipamento_id])
         else
             redirect_to root_path
@@ -30,12 +27,12 @@ class ComponentesController < ApplicationController
     end
 
     def destroy
-        binding.pry
         componente = current_componente
-        equipamento = current_componente
-        componente = Componente.find(componente.id)
-        componente.destroy
-        redirect_to equipamento_path(equipamento.id)
+        equipamento = current_equipamento
+        if componente.destroy
+            redirect_to equipamento_path(equipamento.id)
+        end
+
     end
 
     private
@@ -45,7 +42,6 @@ class ComponentesController < ApplicationController
     end
 
     def current_componente
-        binding.pry
         @componente = Componente.find(params[:id])    
     end
 
