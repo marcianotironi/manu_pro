@@ -7,18 +7,12 @@ Things you may want to cover:
 
 * Ruby version - 3.0.2
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
 * ...
+
+# Como rodar a aplicação?
+
+* Instale no seu sistema operacional o ruby com a versão solicitada (ruby 3.0.2)
+* Baixe a aplicação com comando de git clone;
+* Acesse a pasta onde clonou o repositório e de o comando "bundle install", para instalar o framework rails e as gems que fazem parte da aplicação;
+* Após concluir a instalação das dependências, utilize o comando "rails server" ou "rails s"
+* Após isso, a aplicação estará disponível em seu navegador WEB, no endereço "localhost:3000".
