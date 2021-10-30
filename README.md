@@ -12,3 +12,14 @@ Aplicação base para apresentação do paper disciplina desenvolvimento web I. 
 de dados SQlite3;
 * Após concluir a instalação das dependências, utilize o comando "rails server" ou "rails s" no terminal;
 * Após isso, a aplicação estará disponível em seu navegador WEB, no endereço "localhost:3000".
+
+
+
+# Itens a serem descritos no paper;
+
+* Bootstrap;
+* Linguadem ruby - 3.0.2;
+* Framework Rails 6.1.4.1;
+* Descrição (html, css, javascript);
+* Banco dados SQlite3;
+* Descrição da aplicação, controle de peças por equipamento, para implementação de manutenção(corretiva, preditiva);
