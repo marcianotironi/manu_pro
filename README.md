@@ -17,9 +17,11 @@ de dados SQlite3;
 
 # Itens a serem descritos no paper;
 
-* Bootstrap;
-* Linguadem ruby - 3.0.2;
-* Framework Rails 6.1.4.1;
-* Descrição (html, css, javascript);
-* Banco dados SQlite3;
-* Descrição da aplicação, controle de peças por equipamento, para implementação de manutenção(corretiva, preditiva);
+* Bootstrap; (Marciano)
+* Linguadem ruby - 3.0.2; (Anderson)
+* Framework Rails 6.1.4.1; (Anderson)
+* Descrição (html, css, javascript); (Ailton)
+* Banco dados SQlite3; (Marcos)
+* Descrição da aplicação, controle de peças por equipamento, para implementação de manutenção(corretiva, preditiva); (Marciano)
+* Montar Paper final (Ailton);
+* Montar a apresentação (Marciano);
